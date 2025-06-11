@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CREADOR CAPORAL</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="terminal-effect"></div>
+  <div class="scanline"></div>
+
+  <div class="container">
+    <div class="logo-container">
+      <div class="fire-base"></div>
+      <div class="flame flame-large-1"></div>
+      <div class="flame flame-large-2"></div>
+      <div class="flame flame-medium-1"></div>
+      <div class="flame flame-medium-2"></div>
+      <div class="flame flame-small-1"></div>
+      <div class="flame flame-small-2"></div>
+      <img src="https://i.pinimg.com/736x/43/a7/c0/43a7c00e3b23d8b315d57310137f6624.jpg" alt="Logo Caporal - Generador de tarjetas" class="logo" loading="lazy">
+    </div>
+
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <div class="loading-text">GENERANDO TARJETAS...</div>
+      <div class="progress-bar" id="progressBar">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+
+    <h1 id="mainTitle">GENERADOR DE TARJETAS ALEATORIAS</h1>
+    <small>Formato: usa 'x' para aleatorio (ej: 478985xxxxxxxxxx|08|2028|xxx)</small>
+    <input type="text" id="pattern" placeholder="Ej: 478985xxxxxxxxxx|08|2028|xxx" aria-label="Patrón de la tarjeta">
+    <input type="number" id="amount" placeholder="Cantidad (10-1000)" min="10" max="1000" aria-label="Cantidad de tarjetas a generar">
+    <button id="generateBtn">GENERAR</button>
+    <textarea id="output" rows="10" readonly aria-label="Resultado de tarjetas generadas"></textarea>
+    <button id="copyBtn">COPIAR</button>
+    <div class="neon-text">CREADOR CAPORAL</div>
+  </div>
+
+  <div class="notification" id="notification" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
